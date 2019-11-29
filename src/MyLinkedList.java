@@ -1,3 +1,5 @@
+package src;
+
 class Elem {
 	int value;
 	Elem next;
@@ -7,10 +9,10 @@ class Elem {
     }
 }
 
-class MyLinkedList {
+public class MyLinkedList {
 	private Elem headElem = null;
 
-    private int getNumberElem () {
+    public int getNumberElem () {
         Elem currentElem = headElem;
         int numberElem = 0;
 
@@ -141,20 +143,4 @@ class MyLinkedList {
             tmpElem = tmpElem.next;
         }
     }
-
-    public static void main (String[] args) {
-    	MyLinkedList myList = new MyLinkedList();
-
-    	myList.appendLast(33);
-    	myList.appendLast(34);
-    	myList.appendLast(35);
-    	myList.appendLast(36);
-    	myList.deleteElem(34);
-    	myList.appendFirst(32);
-    	myList.appendAtPosition(34, 3);
-    	myList.deleteELemAtPosition(1);
-    	System.out.print("number Elem: " + myList.getNumberElem());
-
-    	myList.print();
-      }
 }
